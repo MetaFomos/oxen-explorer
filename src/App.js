@@ -13,6 +13,7 @@ import Page from "./pages/Page";
 import OnlyPage from "./pages/OnlyPage";
 import SerialDetail from "./pages/SerialDetail";
 import TransactionDetail from "./pages/TransactionDetail";
+import Quorums from "./pages/Quorums";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route exact path="/" element={<HomePage />} />
+        <Route exact path="/quorums" element={<Quorums />} />
         <Route exact path="/block/:blockID" element={<Block />} />
         <Route exact path="/tx/:txID" element={<Transaction />} />
         <Route exact path="/tx/:txID/1" element={<TransactionDetail />} />
