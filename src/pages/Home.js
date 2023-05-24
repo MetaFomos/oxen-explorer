@@ -15,7 +15,12 @@ const HomePage = () => {
     const remove2 = remove1[1].split("minus any portion that was burned.");
 
     let new1 = [remove1[0], remove2[1]].join();
-    setContent(new1);
+    const remove3 = new1.split(
+      `<h1 style="margin-bottom: 0px">Service Nodes</h1>`
+    );
+    const remove4 = remove3[1].split("Last 3 checkpoints");
+    let new2 = [remove3[0], `Last 3 checkpoints` + remove4[1]].join();
+    setContent(new2);
   };
   useEffect(() => {
     init();
