@@ -2,12 +2,14 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 
-const SerialNumber = () => {
+const SerialDetail = () => {
   const { snID } = useParams();
   const [content, setContent] = useState("");
 
   const init = async () => {
-    const res = await axios.get("https://oxen.observer/sn/" + snID);
+    const res = await axios.get(
+      "https://oxen.observer/sn/" + snID + "/1#more_details"
+    );
     let response = res.data;
     response = response.split("Oxen").join("Selam").split("OXEN").join("SELAM");
     const remove1 = response.split(`/qr/${snID}`);
@@ -27,4 +29,4 @@ const SerialNumber = () => {
   );
 };
 
-export default SerialNumber;
+export default SerialDetail;

@@ -11,6 +11,7 @@ import SerialNumber from "./pages/SerialNumber";
 import NotFound from "./pages/NotFound";
 import Page from "./pages/Page";
 import OnlyPage from "./pages/OnlyPage";
+import SerialDetail from "./pages/SerialDetail";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route exact path="/block/:blockID" element={<Block />} />
         <Route exact path="/tx/:txID" element={<Transaction />} />
         <Route exact path="/sn/:snID" element={<SerialNumber />} />
+        <Route exact path="/sn/:snID/1" element={<SerialDetail />} />
         <Route exact path="/page/:pgnum/:perpage" element={<Page />} />
         <Route exact path="/page/:pgnum" element={<OnlyPage />} />
         <Route exact path="*" element={<NotFound />} />
