@@ -12,6 +12,7 @@ import NotFound from "./pages/NotFound";
 import Page from "./pages/Page";
 import OnlyPage from "./pages/OnlyPage";
 import SerialDetail from "./pages/SerialDetail";
+import TransactionDetail from "./pages/TransactionDetail";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route exact path="/" element={<HomePage />} />
         <Route exact path="/block/:blockID" element={<Block />} />
         <Route exact path="/tx/:txID" element={<Transaction />} />
+        <Route exact path="/tx/:txID/1" element={<TransactionDetail />} />
         <Route exact path="/sn/:snID" element={<SerialNumber />} />
         <Route exact path="/sn/:snID/1" element={<SerialDetail />} />
         <Route exact path="/page/:pgnum/:perpage" element={<Page />} />
