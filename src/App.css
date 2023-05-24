@@ -42,15 +42,15 @@
   /*#0b0a1a;*/
   --primary-fg-color: #dbf7f5;
   --primary-link-color: #dbf7f5;
-  --primary-link-highlight-color: #12c7ba;
+  --primary-link-highlight-color: white;
   --control-bg-color: #222151;
-  --control-fg-color: #12c7ba;
+  --control-fg-color: white;
   --control-highlight-link-color: #0c8b82;
   --control-highlight-bg-color: #dbf7f5;
   --control-highlight-fg-color: black;
-  --text-highlight-color: #12c7ba;
+  --text-highlight-color: white;
   --header-bg-color: #222151;
-  --header-fg-color: #12c7ba;
+  --header-fg-color: white;
   --separator-color: #0e9c92;
 }
 
