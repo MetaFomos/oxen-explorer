@@ -18,6 +18,11 @@ const Page = () => {
     const remove2 = remove1[1].split("minus any portion that was burned.");
 
     let new1 = [remove1[0], remove2[1]].join();
+    new1 = new1
+      .split(`<a href="/checkpoint_quorum/`)
+      .join(`<span href="/checkpoint_quorum/`)
+      .split("Source Code")
+      .join(" ");
     setContent(new1);
   };
   useEffect(() => {

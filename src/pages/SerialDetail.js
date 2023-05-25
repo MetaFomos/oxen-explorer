@@ -14,6 +14,11 @@ const SerialDetail = () => {
     response = response.split("Oxen").join("Selam").split("OXEN").join("SELAM");
     const remove1 = response.split(`/qr/${snID}`);
     response = `${remove1[0]}https://oxen.observer/qr/${snID}${remove1[1]}`;
+    response = response
+      .split(`<a href="/checkpoint_quorum/`)
+      .join(`<span href="/checkpoint_quorum/`)
+      .split("Source Code")
+      .join(" ");
 
     setContent(response);
   };

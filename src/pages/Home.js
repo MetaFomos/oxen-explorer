@@ -20,7 +20,17 @@ const HomePage = () => {
     );
     const remove4 = remove3[1].split("Last 3 checkpoints");
     let new2 = [remove3[0], `Last 3 checkpoints` + remove4[1]].join();
-    setContent(new2);
+    new2.replace(
+      `<a href="/checkpoint_quorum/`,
+      `<span href="/checkpoint_quorum/`
+    );
+    const remove5 = new2
+      .split(`<a href="/checkpoint_quorum/`)
+      .join(`<span href="/checkpoint_quorum/`)
+      .split("Source Code")
+      .join(" ");
+
+    setContent(remove5);
   };
   useEffect(() => {
     init();

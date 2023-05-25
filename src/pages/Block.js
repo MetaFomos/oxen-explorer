@@ -11,6 +11,12 @@ const Block = () => {
     let response = res.data;
     response = response.split("Oxen").join("Selam").split("OXEN").join("SELAM");
 
+    response = response
+      .split(`<a href="/checkpoint_quorum/`)
+      .join(`<span href="/checkpoint_quorum/`)
+      .split("Source Code")
+      .join(" ");
+
     setContent(response);
   };
   useEffect(() => {
