@@ -15,16 +15,16 @@ const OnlyPage = () => {
     const remove1 = response.split("Server Time");
     const remove2 = remove1[1].split("minus any portion that was burned.");
 
-    let new1 = [remove1[0], remove2[1]].join();
+    let new1 = [remove1[0], remove2[1]].join("");
     new1 = new1
       .split(`<a href="/checkpoint_quorum/`)
       .join(`<span href="/checkpoint_quorum/`)
       .split("Source Code")
-      .join(" ")
+      .join("")
       .split("| Explorer Revision: d92abf692")
       .join("")
       .split("| Selam Version: 10.3.0-1~deb11")
-      .join(" ");
+      .join("");
 
     setContent(new1);
   };
